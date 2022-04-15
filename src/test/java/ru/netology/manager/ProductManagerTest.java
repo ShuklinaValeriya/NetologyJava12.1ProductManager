@@ -1,4 +1,4 @@
-package ru.netology.ru.netology.manager;
+package ru.netology.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -32,26 +32,11 @@ class ProductManagerTest {
     }
 
     @Test
-    void shouldFindNameBook() {
+    void shouldFindTitleBook() {
 
 
         Product[] expected = new Product[]{book2};
         Product[] actual = manager.searchBy("Алхимик");
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    void shouldFindAuthorBook() {
-        Product[] expected = new Product[]{book1};
-        Product[] actual = manager.searchBy("Уолтер Айзексон");
-        assertArrayEquals(expected, actual);
-    }
-
-    @Test
-    void shouldFindManufactureSmartphone() {
-
-        Product[] expected = new Product[]{smartphone3};
-        Product[] actual = manager.searchBy("Huawei");
         assertArrayEquals(expected, actual);
     }
 
